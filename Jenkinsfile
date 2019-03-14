@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('test') {
       steps {
-        build 'html'
+        sh 'echo testing'
       }
     }
   }

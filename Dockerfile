@@ -1,2 +1,2 @@
-FROM ubuntu
-CMD ["echo","hello my file....."]
+FROM nginx
+COPY static-html-directory /usr/share/nginx/html

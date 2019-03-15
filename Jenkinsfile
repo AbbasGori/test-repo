@@ -6,10 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('test') {
-      agent any
+    stage('docker') {
       steps {
-        sh 'echo "dockerimage created"'
+        sleep 5
       }
     }
   }

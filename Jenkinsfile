@@ -7,12 +7,15 @@ pipeline {
   }
   stages {
     stage('docker') {
+      agent {
+        dockerfile {
+          filename 'Dockerfile'
+        }
+
+      }
       steps {
         sleep 5
       }
     }
-  }
-  environment {
-    test = 'value'
   }
 }

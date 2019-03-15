@@ -1,18 +1,13 @@
 pipeline {
   agent {
-    dockerfile {
-      filename 'Dockerfile'
+    dockerfile true
     }
-
-  }
   stages {
-    stage('test') {
+    stage('Example') {
       steps {
-        sh 'echo "dockerimage created"'
+        echo 'docker image createed'
+        }
       }
     }
-  }
-  environment {
-    test = 'value'
-  }
 }
+

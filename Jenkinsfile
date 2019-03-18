@@ -9,8 +9,8 @@ pipeline {
     }
     stage('docker') {
       agent {
-        docker {
-          image 'jenkins'
+        dockerfile {
+          filename 'Dockerfile'
         }
 
       }

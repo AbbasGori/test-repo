@@ -1,25 +1,20 @@
 pipeline {
   agent {
     node {
-      label 's4-dev'
+      label 'master-jenkins'
     }
 
   }
   stages {
     stage('test') {
-      steps {
-        sh 'echo completed'
-      }
-    }
-    stage('docker') {
       agent {
-        dockerfile {
-          filename 'Dockerfile'
+        node {
+          label 's4-dev'
         }
 
       }
       steps {
-        echo 'completed'
+        sh 'echo completed'
       }
     }
   }

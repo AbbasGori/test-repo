@@ -7,8 +7,17 @@ pipeline {
   }
   stages {
     stage('test') {
-      steps {
-        sh 'hostname -I'
+      parallel {
+        stage('test') {
+          steps {
+            sh 'hostname -I'
+          }
+        }
+        stage('echo') {
+          steps {
+            sh 'echo in agent'
+          }
+        }
       }
     }
   }

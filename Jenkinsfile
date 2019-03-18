@@ -7,30 +7,16 @@ pipeline {
   }
   stages {
     stage('test') {
-      parallel {
-        stage('test') {
-          agent {
-            node {
-              label 's4-dev'
-            }
-
-          }
-          steps {
-            echo 'hi'
-            sh 'hostname -I'
-          }
+      agent {
+        node {
+          label 's4-dev'
         }
-        stage('echo') {
-          agent {
-            node {
-              label 's4-dev'
-            }
 
-          }
-          steps {
-            sh 'echo "in agent"'
-          }
-        }
+      }
+      steps {
+        echo 'hi'
+        sh 'hostname -I'
+        sh 'echo "reflect"'
       }
     }
     stage('next') {

@@ -9,12 +9,12 @@ pipeline {
     stage('test') {
       agent {
         node {
-          label 's4-dev'
+          label 'master-jenkins'
         }
 
       }
       steps {
-        sh 'echo completed'
+        sh 'mkdir test'
       }
     }
   }

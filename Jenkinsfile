@@ -16,7 +16,7 @@ pipeline {
       steps {
         echo 'hi'
         sh 'hostname -I'
-        sh 'sudo docker build ~/ -t test'
+        sh 'sudo docker build /home/abbasg/ -t test'
       }
     }
     stage('next') {

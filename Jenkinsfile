@@ -16,6 +16,7 @@ pipeline {
 
           }
           steps {
+            echo 'hi'
             sh 'hostname -I'
           }
         }

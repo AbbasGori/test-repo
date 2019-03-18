@@ -14,7 +14,7 @@ pipeline {
 
       }
       steps {
-        sh 'mkdir test'
+        sh 'hostname -I'
       }
     }
   }

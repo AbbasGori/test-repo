@@ -1,2 +1,5 @@
-FROM nginx
-COPY static-html-directory /usr/share/nginx/html
+FROM ubuntu
+
+RUN apt-get update
+
+CMD ["echo","hello my file....."]

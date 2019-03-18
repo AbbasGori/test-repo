@@ -21,7 +21,7 @@ pipeline {
     }
     stage('next') {
       steps {
-        sh 'echo ""'
+        sh 'echo "image created"'
       }
     }
   }

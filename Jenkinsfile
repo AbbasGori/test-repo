@@ -9,7 +9,7 @@ pipeline {
     stage('test') {
       agent {
         node {
-          label 'master-jenkins'
+          label 's4-dev'
         }
 
       }

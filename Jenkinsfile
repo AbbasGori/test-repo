@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 's4-dev'
-    }
-
-  }
+  agent any
   stages {
     stage('test') {
       agent any

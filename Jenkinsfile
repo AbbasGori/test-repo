@@ -13,8 +13,8 @@ pipeline {
     }
     stage('docker') {
       agent {
-        docker {
-          image 'ubuntu'
+        dockerfile {
+          filename 'Dockerfile'
         }
 
       }

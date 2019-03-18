@@ -7,12 +7,7 @@ pipeline {
   }
   stages {
     stage('test') {
-      agent {
-        node {
-          label 's4-dev'
-        }
-
-      }
+      agent any
       steps {
         sh 'echo completed'
       }
@@ -26,6 +21,7 @@ pipeline {
       }
       steps {
         echo 'images'
+        node(label: 's4-dev')
       }
     }
   }

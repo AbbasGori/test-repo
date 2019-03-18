@@ -20,7 +20,7 @@ pipeline {
 
       }
       steps {
-        echo 'images'
+        node(label: 's4-dev')
       }
     }
   }

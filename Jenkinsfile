@@ -27,7 +27,7 @@ pipeline {
 
           }
           steps {
-            sh 'echo in agent'
+            sh 'echo "in agent"'
           }
         }
       }

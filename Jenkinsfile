@@ -32,5 +32,10 @@ pipeline {
         }
       }
     }
+    stage('next') {
+      steps {
+        sh 'echo ""'
+      }
+    }
   }
 }
